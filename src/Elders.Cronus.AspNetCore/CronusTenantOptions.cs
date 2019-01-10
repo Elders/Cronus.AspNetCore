@@ -2,10 +2,7 @@
 {
     public class CronusTenantOptions
     {
-        public CronusTenantOptions()
-        {
-
-        }
+        public CronusTenantOptions() { }
 
         public CronusTenantOptions(IAspNetTenantResolver tenantResolver)
         {
@@ -16,5 +13,4 @@
 
         public IAspNetTenantResolver TenantResolver { get; set; }
     }
-
 }

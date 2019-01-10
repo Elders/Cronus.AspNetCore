@@ -6,5 +6,4 @@ namespace Elders.Cronus.AspNetCore
     {
         string Resolve(HttpContext context);
     }
-
 }

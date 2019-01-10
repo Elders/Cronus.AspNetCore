@@ -1,3 +1,6 @@
+#### 5.2.0 - 10.12.2018
+* Updates packages
+
 #### 5.1.0 - 10.12.2018
 * Updates to DNC 2.2
 
