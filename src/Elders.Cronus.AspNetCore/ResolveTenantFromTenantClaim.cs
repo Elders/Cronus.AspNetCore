@@ -13,5 +13,4 @@ namespace Elders.Cronus.AspNetCore
             return tenantClaim?.Value;
         }
     }
-
 }
