@@ -9,8 +9,6 @@ namespace Elders.Cronus.AspNetCore
         public static IServiceCollection AddCronusAspNetCore(this IServiceCollection services)
         {
             services.AddSingleton<IControllerFactory, CronusControllerFactory>();
-            services.AddSingleton<IAspNetTenantResolver, ResolveTenantFromTenantClaim>();
-            services.AddSingleton<ResolveTenantFromTenantClaim, ResolveTenantFromTenantClaim>();
             services.AddSingleton<CronusTenantOptions, CronusTenantOptions>();
 
             return services;
@@ -19,8 +17,6 @@ namespace Elders.Cronus.AspNetCore
         public static IServiceCollection AddCronusAspNetCore(this IServiceCollection services, Action<CronusTenantOptions> options)
         {
             services.AddSingleton<IControllerFactory, CronusControllerFactory>();
-            services.AddSingleton<IAspNetTenantResolver, ResolveTenantFromTenantClaim>();
-            services.AddSingleton<ResolveTenantFromTenantClaim, ResolveTenantFromTenantClaim>();
 
             var opts = new CronusTenantOptions();
             options(opts);
