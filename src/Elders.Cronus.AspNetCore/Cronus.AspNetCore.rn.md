@@ -1,3 +1,7 @@
+#### 6.0.0-beta0001 - 28.10.2019
+* Updates packages
+* Reworks how the tenant is resolved
+
 #### 5.2.0 - 10.12.2018
 * Updates packages
 
