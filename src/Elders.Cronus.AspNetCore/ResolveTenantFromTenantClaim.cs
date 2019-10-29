@@ -5,16 +5,26 @@ using System.Linq;
 
 namespace Elders.Cronus.AspNetCore
 {
-    public class ResolveTenantFromTenantClaim : ITenantResolver<HttpContext>
+    public class HttpContextTenantResolver : ITenantResolver<DefaultHttpContext>, ITenantResolver<HttpContext>
     {
         private readonly CronusTenantOptions options;
 
-        public ResolveTenantFromTenantClaim(CronusTenantOptions options)
+        public HttpContextTenantResolver(CronusTenantOptions options)
         {
             this.options = options;
         }
 
-        public string Resolve(HttpContext context)
+        public string Resolve(DefaultHttpContext source)
+        {
+            return ResolveTenant(source);
+        }
+
+        public string Resolve(HttpContext source)
+        {
+            return ResolveTenant(source);
+        }
+
+        private string ResolveTenant(HttpContext context)
         {
             var tenantClaim = context.User.Claims.Where(claim => claim.Type.Equals("tenant", StringComparison.OrdinalIgnoreCase) || claim.Type.Equals("tenant_client", StringComparison.OrdinalIgnoreCase) || claim.Type.Equals("client_tenant", StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
             string tenant = tenantClaim?.Value;
