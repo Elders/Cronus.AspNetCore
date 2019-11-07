@@ -7,11 +7,11 @@ namespace Elders.Cronus.AspNetCore
 {
     public class HttpContextTenantResolver : ITenantResolver<DefaultHttpContext>, ITenantResolver<HttpContext>
     {
-        private readonly CronusTenantOptions options;
+        private readonly ITenantList tenantList;
 
-        public HttpContextTenantResolver(CronusTenantOptions options)
+        public HttpContextTenantResolver(ITenantList tenantList)
         {
-            this.options = options;
+            this.tenantList = tenantList;
         }
 
         public string Resolve(DefaultHttpContext source)
@@ -30,10 +30,16 @@ namespace Elders.Cronus.AspNetCore
             string tenant = tenantClaim?.Value;
 
             if (string.IsNullOrEmpty(tenant))
-                tenant = options.DefaultTenant;
-
-            if (string.IsNullOrEmpty(tenant))
-                throw new Exception("Unable to resolve tenant. Make sure that you have `IAspNetTenantResolver` registered. The default implementation is ResolveTenantFromTenantClaim. Another way to hack it is to use `.AddCronusAspNetCore(o => o.DefaultTenant = \"myTenant\")");
+            {
+                if (tenantList.GetTenants().Count() == 1)
+                {
+                    tenant = tenantList.GetTenants().Single();
+                }
+                else
+                {
+                    throw new Exception("Unable to resolve tenant. Make sure that you have `IAspNetTenantResolver` registered. The default implementation is ResolveTenantFromTenantClaim.");
+                }
+            }
 
             return tenant;
         }
