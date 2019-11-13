@@ -18,11 +18,11 @@
     <RepositoryUrl>https://github.com/Elders/Cronus.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageIconUrl>https://raw.githubusercontent.com/Elders/logo/master/cronus/frame.png</PackageIconUrl>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>Elders.Cronus.AspNetCore</AssemblyName>
     <NeutralLanguage>en-US</NeutralLanguage>
     <RootNamespace>Elders.Cronus.AspNetCore</RootNamespace>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <AssemblyVersion>6.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
