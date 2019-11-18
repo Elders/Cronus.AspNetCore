@@ -1,3 +1,6 @@
+#### 6.0.0-beta0003 - 18.11.2019
+* Update Cronus to 6.0.0-beta0010
+
 #### 6.0.0-beta0003 - 07.11.2019
 * Removes the option to specify a default tenant. If you have only one tenant registered it will be used if the API is hosted without authentication.
 
