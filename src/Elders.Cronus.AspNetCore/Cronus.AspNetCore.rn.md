@@ -1,3 +1,6 @@
+#### 6.0.0-beta0005 - 11.12.2019
+* Updates packages
+
 #### 6.0.0-beta0004 - 18.11.2019
 * Update Cronus to 6.0.0-beta0010
 
