@@ -1,5 +1,6 @@
 ﻿using Elders.Cronus.Multitenancy;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Options;
 using System;
 using System.Linq;
 
@@ -7,11 +8,12 @@ namespace Elders.Cronus.AspNetCore
 {
     public class HttpContextTenantResolver : ITenantResolver<DefaultHttpContext>, ITenantResolver<HttpContext>
     {
-        private readonly ITenantList tenantList;
+        private TenantsOptions tenants;
 
-        public HttpContextTenantResolver(ITenantList tenantList)
+        public HttpContextTenantResolver(IOptionsMonitor<TenantsOptions> tenantsOptions)
         {
-            this.tenantList = tenantList;
+            this.tenants = tenantsOptions.CurrentValue;
+            tenantsOptions.OnChange(Changed);
         }
 
         public string Resolve(DefaultHttpContext source)
@@ -31,9 +33,9 @@ namespace Elders.Cronus.AspNetCore
 
             if (string.IsNullOrEmpty(tenant))
             {
-                if (tenantList.GetTenants().Count() == 1)
+                if (tenants.Tenants.Count() == 1)
                 {
-                    tenant = tenantList.GetTenants().Single();
+                    tenant = tenants.Tenants.Single();
                 }
                 else
                 {
@@ -42,6 +44,14 @@ namespace Elders.Cronus.AspNetCore
             }
 
             return tenant;
+        }
+
+        private void Changed(TenantsOptions newTenants)
+        {
+            if (tenants != newTenants)
+            {
+                tenants = newTenants;
+            }
         }
     }
 }
