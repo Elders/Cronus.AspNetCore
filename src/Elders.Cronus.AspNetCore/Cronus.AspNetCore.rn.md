@@ -1,3 +1,6 @@
+#### 6.0.0-beta0007 - 08.04.2020
+* Updates packages
+
 #### 6.0.0-beta0006 - 27.03.2020
 * Updates packages
 
