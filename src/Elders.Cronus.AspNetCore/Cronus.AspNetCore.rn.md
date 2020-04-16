@@ -1,3 +1,7 @@
+#### 6.0.0 - 16.04.2020
+* Removes the option to specify a default tenant. If you have only one tenant registered it will be used if the API is hosted without authentication.
+* Reworks how the tenant is resolved
+
 #### 5.2.0 - 10.12.2018
 * Updates packages
 

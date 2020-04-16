@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc.Controllers;
+﻿using Elders.Cronus.MessageProcessing;
+using Elders.Cronus.Multitenancy;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace Elders.Cronus.AspNetCore
 {
@@ -8,26 +10,21 @@ namespace Elders.Cronus.AspNetCore
     {
         public static IServiceCollection AddCronusAspNetCore(this IServiceCollection services)
         {
-            services.AddSingleton<IControllerFactory, CronusControllerFactory>();
-            services.AddSingleton<IAspNetTenantResolver, ResolveTenantFromTenantClaim>();
-            services.AddSingleton<ResolveTenantFromTenantClaim, ResolveTenantFromTenantClaim>();
-            services.AddSingleton<CronusTenantOptions, CronusTenantOptions>();
+            services.AddSingleton<ITenantResolver<DefaultHttpContext>, HttpContextTenantResolver>();
+            services.AddSingleton<ITenantResolver<HttpContext>, HttpContextTenantResolver>();
 
             return services;
         }
 
-        public static IServiceCollection AddCronusAspNetCore(this IServiceCollection services, Action<CronusTenantOptions> options)
+        public static IApplicationBuilder UseCronusAspNetCore(this IApplicationBuilder app)
         {
-            services.AddSingleton<IControllerFactory, CronusControllerFactory>();
-            services.AddSingleton<IAspNetTenantResolver, ResolveTenantFromTenantClaim>();
-            services.AddSingleton<ResolveTenantFromTenantClaim, ResolveTenantFromTenantClaim>();
+            return app.Use((context, next) =>
+            {
+                var cronusContextFactory = context.RequestServices.GetRequiredService<CronusContextFactory>();
+                CronusContext cronusContext = cronusContextFactory.GetContext(context, context.RequestServices);
 
-            var opts = new CronusTenantOptions();
-            options(opts);
-            services.AddSingleton<CronusTenantOptions>(opts);
-
-            return services;
+                return next.Invoke();
+            });
         }
     }
-
 }
