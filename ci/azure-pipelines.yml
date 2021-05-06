@@ -6,8 +6,8 @@ trigger:
     branches:
       include:
       - master
-      - next
-      - next-major
+      - beta
+      - preview
     paths:
       exclude:
       - docs/CHANGELOG.md
