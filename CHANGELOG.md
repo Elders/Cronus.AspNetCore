@@ -1,3 +1,13 @@
+## [6.1.3-preview.1](https://github.com/Elders/Cronus.AspNetCore/compare/v6.1.2...v6.1.3-preview.1) (2021-05-06)
+
+
+### Bug Fixes
+
+* Fixes assembly Copyright ([8464516](https://github.com/Elders/Cronus.AspNetCore/commit/846451694daeb84a05317cd2cd0c910f30526960))
+* Fixes the prerelease flag ([612f191](https://github.com/Elders/Cronus.AspNetCore/commit/612f191de05bdb910af39265fd9979be60cb02ac))
+* Project cleanup during CI migration ([acdd624](https://github.com/Elders/Cronus.AspNetCore/commit/acdd624a1fc1a38055fbb5a0a0eda09944de8d24))
+* Updates Cronus ([1e8748f](https://github.com/Elders/Cronus.AspNetCore/commit/1e8748fb86fb0e2fd4fae76ee718c5b3a668c6a1))
+
 ## [6.1.3-beta.1](https://github.com/Elders/Cronus.AspNetCore/compare/v6.1.2...v6.1.3-beta.1) (2021-05-06)
 
 
