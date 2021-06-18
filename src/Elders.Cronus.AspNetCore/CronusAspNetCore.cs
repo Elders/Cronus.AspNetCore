@@ -12,6 +12,7 @@ namespace Elders.Cronus.AspNetCore
         {
             services.AddSingleton<ITenantResolver<DefaultHttpContext>, HttpContextTenantResolver>();
             services.AddSingleton<ITenantResolver<HttpContext>, HttpContextTenantResolver>();
+            services.AddSingleton<HttpContextTenantResolver>();
 
             return services;
         }
