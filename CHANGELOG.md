@@ -1,3 +1,10 @@
+## [6.1.3-preview.2](https://github.com/Elders/Cronus.AspNetCore/compare/v6.1.3-preview.1...v6.1.3-preview.2) (2021-06-18)
+
+
+### Bug Fixes
+
+* Properly added service implementation ([1a00d73](https://github.com/Elders/Cronus.AspNetCore/commit/1a00d73c40969c2bb1345644ff9542e4c7d058f7))
+
 ## [6.1.3-preview.1](https://github.com/Elders/Cronus.AspNetCore/compare/v6.1.2...v6.1.3-preview.1) (2021-05-06)
 
 
