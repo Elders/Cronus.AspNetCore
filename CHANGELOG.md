@@ -1,3 +1,10 @@
+## [6.1.3-preview.3](https://github.com/Elders/Cronus.AspNetCore/compare/v6.1.3-preview.2...v6.1.3-preview.3) (2021-06-30)
+
+
+### Bug Fixes
+
+* Changed Exception thrown when unable to resolve tenant ([f61916e](https://github.com/Elders/Cronus.AspNetCore/commit/f61916ec0e4cd8d0306cc147dc7ee987c2dbaf87))
+
 ## [6.1.3-preview.2](https://github.com/Elders/Cronus.AspNetCore/compare/v6.1.3-preview.1...v6.1.3-preview.2) (2021-06-18)
 
 
