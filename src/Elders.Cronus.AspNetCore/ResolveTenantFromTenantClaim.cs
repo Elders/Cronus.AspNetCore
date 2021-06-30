@@ -1,4 +1,5 @@
-﻿using Elders.Cronus.Multitenancy;
+﻿using Elders.Cronus.AspNetCore.Exeptions;
+using Elders.Cronus.Multitenancy;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 using System;
@@ -39,7 +40,8 @@ namespace Elders.Cronus.AspNetCore
                 }
                 else
                 {
-                    throw new Exception("Unable to resolve tenant. Make sure that you have `IAspNetTenantResolver` registered. The default implementation is ResolveTenantFromTenantClaim.");
+                    //throw new Exception($"Unable to resolve tenant. Make sure that you have `IAspNetTenantResolver` registered. The default implementation is {nameof(HttpContextTenantResolver)}.");
+                    throw new UnableToResolveTenantExeption("Unable to resolve tenant.");
                 }
             }
 
