@@ -1,3 +1,10 @@
+## [6.1.3-preview.4](https://github.com/Elders/Cronus.AspNetCore/compare/v6.1.3-preview.3...v6.1.3-preview.4) (2021-08-02)
+
+
+### Bug Fixes
+
+* Updates Cronus ([efa31d5](https://github.com/Elders/Cronus.AspNetCore/commit/efa31d525851b1e7aa7a856f6cf4fb8cb5be06a7))
+
 ## [6.1.3-preview.3](https://github.com/Elders/Cronus.AspNetCore/compare/v6.1.3-preview.2...v6.1.3-preview.3) (2021-06-30)
 
 
