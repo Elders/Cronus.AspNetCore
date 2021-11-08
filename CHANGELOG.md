@@ -1,3 +1,10 @@
+## [6.2.1](https://github.com/Elders/Cronus.AspNetCore/compare/v6.2.0...v6.2.1) (2021-11-08)
+
+
+### Bug Fixes
+
+* Removes obsolete badge from README ([d9700e2](https://github.com/Elders/Cronus.AspNetCore/commit/d9700e28a849d5f2e156954b333ae373df132a51))
+
 # [6.2.0](https://github.com/Elders/Cronus.AspNetCore/compare/v6.1.2...v6.2.0) (2021-11-08)
 
 
