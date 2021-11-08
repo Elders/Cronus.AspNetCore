@@ -1,3 +1,21 @@
+# [6.2.0](https://github.com/Elders/Cronus.AspNetCore/compare/v6.1.2...v6.2.0) (2021-11-08)
+
+
+### Bug Fixes
+
+* Changed Exception thrown when unable to resolve tenant ([f61916e](https://github.com/Elders/Cronus.AspNetCore/commit/f61916ec0e4cd8d0306cc147dc7ee987c2dbaf87))
+* Fixes assembly Copyright ([8464516](https://github.com/Elders/Cronus.AspNetCore/commit/846451694daeb84a05317cd2cd0c910f30526960))
+* Fixes the prerelease flag ([612f191](https://github.com/Elders/Cronus.AspNetCore/commit/612f191de05bdb910af39265fd9979be60cb02ac))
+* Project cleanup during CI migration ([acdd624](https://github.com/Elders/Cronus.AspNetCore/commit/acdd624a1fc1a38055fbb5a0a0eda09944de8d24))
+* Properly added service implementation ([1a00d73](https://github.com/Elders/Cronus.AspNetCore/commit/1a00d73c40969c2bb1345644ff9542e4c7d058f7))
+* Updates Cronus ([efa31d5](https://github.com/Elders/Cronus.AspNetCore/commit/efa31d525851b1e7aa7a856f6cf4fb8cb5be06a7))
+* Updates Cronus ([1e8748f](https://github.com/Elders/Cronus.AspNetCore/commit/1e8748fb86fb0e2fd4fae76ee718c5b3a668c6a1))
+
+
+### Features
+
+* Release ([6851f49](https://github.com/Elders/Cronus.AspNetCore/commit/6851f49acb1cfddd1c5b4f7f6920a8504da4942e))
+
 ## [6.1.3-preview.4](https://github.com/Elders/Cronus.AspNetCore/compare/v6.1.3-preview.3...v6.1.3-preview.4) (2021-08-02)
 
 
