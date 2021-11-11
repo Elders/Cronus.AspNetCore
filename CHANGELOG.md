@@ -1,3 +1,5 @@
+# [7.0.0-preview.1](https://github.com/Elders/Cronus.AspNetCore/compare/v6.2.1...v7.0.0-preview.1) (2021-11-11)
+
 ## [6.2.1](https://github.com/Elders/Cronus.AspNetCore/compare/v6.2.0...v6.2.1) (2021-11-08)
 
 
