@@ -1,3 +1,10 @@
+# [7.0.0-preview.3](https://github.com/Elders/Cronus.AspNetCore/compare/v7.0.0-preview.2...v7.0.0-preview.3) (2022-01-29)
+
+
+### Bug Fixes
+
+* Updates packages ([d380e9f](https://github.com/Elders/Cronus.AspNetCore/commit/d380e9f8200628b6cc000185bb58037dc4332e42))
+
 # [7.0.0-preview.2](https://github.com/Elders/Cronus.AspNetCore/compare/v7.0.0-preview.1...v7.0.0-preview.2) (2021-11-30)
 
 
