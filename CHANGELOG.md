@@ -1,3 +1,10 @@
+# [7.0.0-preview.4](https://github.com/Elders/Cronus.AspNetCore/compare/v7.0.0-preview.3...v7.0.0-preview.4) (2022-03-31)
+
+
+### Bug Fixes
+
+* Migrate to 6.0.3 ([40dd0b0](https://github.com/Elders/Cronus.AspNetCore/commit/40dd0b0a66cb340308c66b08fbaa2deef0442116))
+
 # [7.0.0-preview.3](https://github.com/Elders/Cronus.AspNetCore/compare/v7.0.0-preview.2...v7.0.0-preview.3) (2022-01-29)
 
 
