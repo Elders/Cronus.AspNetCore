@@ -1,3 +1,12 @@
+# [7.0.0](https://github.com/Elders/Cronus.AspNetCore/compare/v6.2.1...v7.0.0) (2022-04-05)
+
+
+### Bug Fixes
+
+* Add Cronus ([6219433](https://github.com/Elders/Cronus.AspNetCore/commit/62194336108432a76cbabfeddaba7c7dd8f362e0))
+* Migrate to 6.0.3 ([40dd0b0](https://github.com/Elders/Cronus.AspNetCore/commit/40dd0b0a66cb340308c66b08fbaa2deef0442116))
+* Updates packages ([d380e9f](https://github.com/Elders/Cronus.AspNetCore/commit/d380e9f8200628b6cc000185bb58037dc4332e42))
+
 # [7.0.0-preview.4](https://github.com/Elders/Cronus.AspNetCore/compare/v7.0.0-preview.3...v7.0.0-preview.4) (2022-03-31)
 
 
