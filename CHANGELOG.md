@@ -1,3 +1,10 @@
+## [8.0.1](https://github.com/Elders/Cronus.AspNetCore/compare/v8.0.0...v8.0.1) (2022-07-07)
+
+
+### Bug Fixes
+
+* check the HttpContext before resolving the tenant ([219ccf0](https://github.com/Elders/Cronus.AspNetCore/commit/219ccf0de86246311c3fa4e66853186ae7a5fa1d))
+
 # [8.0.0](https://github.com/Elders/Cronus.AspNetCore/compare/v7.0.0...v8.0.0) (2022-05-25)
 
 # [7.0.0](https://github.com/Elders/Cronus.AspNetCore/compare/v6.2.1...v7.0.0) (2022-04-05)
