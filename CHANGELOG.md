@@ -1,3 +1,10 @@
+## [8.0.2](https://github.com/Elders/Cronus.AspNetCore/compare/v8.0.1...v8.0.2) (2022-07-08)
+
+
+### Bug Fixes
+
+* Removes throwing of exceptions in HttpContextTenantResolver and Updates Cronus ([48b16de](https://github.com/Elders/Cronus.AspNetCore/commit/48b16de894d29ee17a712c50b9e0abab7323fc4d))
+
 ## [8.0.1](https://github.com/Elders/Cronus.AspNetCore/compare/v8.0.0...v8.0.1) (2022-07-07)
 
 
