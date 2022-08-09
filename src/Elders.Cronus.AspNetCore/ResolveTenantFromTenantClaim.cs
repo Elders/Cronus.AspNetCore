@@ -2,6 +2,7 @@
 using System.Linq;
 using Elders.Cronus.Multitenancy;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Primitives;
 
 namespace Elders.Cronus.AspNetCore
 {
@@ -24,11 +25,20 @@ namespace Elders.Cronus.AspNetCore
 
         private string ResolveTenant(HttpContext context)
         {
-            if (context is null || context.User is null || context.User.Claims.Any() == false)
-                return string.Empty;
+            string tenant = string.Empty;
 
+            if (context is null || context.User is null || context.User.Claims.Any() == false)
+            {
+                // resolve tenant from header in case of authenticationless process
+                context.Request.Headers.TryGetValue("tenant", out StringValues tenantHeader);
+                tenant = tenantHeader.FirstOrDefault(t => string.IsNullOrEmpty(t) == false);
+
+                return tenant;
+            }
+
+            // resolve tenant from jwt token
             var tenantClaim = context.User.Claims.Where(claim => claim.Type.Equals("tenant", StringComparison.OrdinalIgnoreCase) || claim.Type.Equals("tenant_client", StringComparison.OrdinalIgnoreCase) || claim.Type.Equals("client_tenant", StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
-            string tenant = tenantClaim?.Value;
+            tenant = tenantClaim?.Value;
 
             return tenant;
         }
