@@ -1,3 +1,10 @@
+# [8.1.0](https://github.com/Elders/Cronus.AspNetCore/compare/v8.0.2...v8.1.0) (2022-08-09)
+
+
+### Features
+
+* Adds multitenancy support for authenticationless Cronus ([a345070](https://github.com/Elders/Cronus.AspNetCore/commit/a345070a7926ee131e1f353e532c73621ca3351c))
+
 ## [8.0.2](https://github.com/Elders/Cronus.AspNetCore/compare/v8.0.1...v8.0.2) (2022-07-08)
 
 
