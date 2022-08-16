@@ -1,3 +1,10 @@
+## [8.1.1](https://github.com/Elders/Cronus.AspNetCore/compare/v8.1.0...v8.1.1) (2022-08-16)
+
+
+### Bug Fixes
+
+* pipeline test ([6384dc9](https://github.com/Elders/Cronus.AspNetCore/commit/6384dc9d110114dc2191de0e2cf8434237952e61))
+
 # [8.1.0](https://github.com/Elders/Cronus.AspNetCore/compare/v8.0.2...v8.1.0) (2022-08-09)
 
 
