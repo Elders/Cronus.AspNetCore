@@ -27,6 +27,9 @@ namespace Elders.Cronus.AspNetCore
         {
             string tenant = string.Empty;
 
+            if (context.User.Identity.IsAuthenticated == false)
+                return tenant;
+
             if (context is null || context.User is null || context.User.Claims.Any() == false)
             {
                 // resolve tenant from header in case of authenticationless process
