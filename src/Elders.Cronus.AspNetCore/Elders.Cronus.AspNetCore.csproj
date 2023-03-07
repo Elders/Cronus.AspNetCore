@@ -13,7 +13,7 @@
     <Description>Cronus is a lightweight framework for building event driven systems with DDD/CQRS in mind.</Description>
     <PackageTags>CQRS DDD ES Event store sourcing cronus</PackageTags>
 
-    <Copyright>Copyright © Elders OSS 2013-2022</Copyright>
+    <Copyright>Copyright © Elders OSS 2013-2023</Copyright>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RequireLicenseAcceptance>true</RequireLicenseAcceptance>
 
@@ -32,13 +32,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cronus" Version="8.6.1" />
+    <PackageReference Include="Cronus" Version="8.7.7" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>
