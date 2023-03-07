@@ -1,3 +1,10 @@
+# [8.2.0](https://github.com/Elders/Cronus.AspNetCore/compare/v8.1.1...v8.2.0) (2023-03-07)
+
+
+### Features
+
+* Updates Cronus ([daff17a](https://github.com/Elders/Cronus.AspNetCore/commit/daff17a59ed4018c9a499d324057ecc06fddc66f))
+
 ## [8.1.1](https://github.com/Elders/Cronus.AspNetCore/compare/v8.1.0...v8.1.1) (2022-08-16)
 
 
