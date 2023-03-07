@@ -1,3 +1,10 @@
+## [8.2.1](https://github.com/Elders/Cronus.AspNetCore/compare/v8.2.0...v8.2.1) (2023-03-07)
+
+
+### Bug Fixes
+
+* Returns status code 401 when we are not able to resolve the tenant from current http context or other sources. ([dea54b9](https://github.com/Elders/Cronus.AspNetCore/commit/dea54b9b94dd99a38cfc2c4e04032681741d987b))
+
 # [8.2.0](https://github.com/Elders/Cronus.AspNetCore/compare/v8.1.1...v8.2.0) (2023-03-07)
 
 
