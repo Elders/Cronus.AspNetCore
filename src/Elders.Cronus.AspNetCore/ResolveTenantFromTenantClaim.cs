@@ -8,10 +8,7 @@ namespace Elders.Cronus.AspNetCore
 {
     public class HttpContextTenantResolver : ITenantResolver<DefaultHttpContext>, ITenantResolver<HttpContext>
     {
-        public HttpContextTenantResolver()
-        {
-
-        }
+        public HttpContextTenantResolver() { }
 
         public string Resolve(DefaultHttpContext source)
         {
