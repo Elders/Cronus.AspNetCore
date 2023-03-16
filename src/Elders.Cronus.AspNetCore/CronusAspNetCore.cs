@@ -75,7 +75,7 @@ namespace Elders.Cronus.AspNetCore
             Endpoint endpoint = context.Features.Get<IEndpointFeature>()?.Endpoint;
             if (endpoint is not null)
             {
-                DoNotRequireTenant doNotRequireTenantAttribute = endpoint.Metadata.GetMetadata<DoNotRequireTenant>();
+                BypassTenantAttribute doNotRequireTenantAttribute = endpoint.Metadata.GetMetadata<BypassTenantAttribute>();
                 if (doNotRequireTenantAttribute is not null)
                     shoudResolve = false;
             }
