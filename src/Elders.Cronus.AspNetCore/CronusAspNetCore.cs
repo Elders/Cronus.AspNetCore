@@ -3,6 +3,7 @@ using Elders.Cronus.MessageProcessing;
 using Elders.Cronus.Multitenancy;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net;
@@ -23,7 +24,14 @@ namespace Elders.Cronus.AspNetCore
 
         public static IApplicationBuilder UseCronusAspNetCore(this IApplicationBuilder app)
         {
-            return app.Use((context, next) => ResolveCronusContext(context, next));
+            return app.Use((context, next) =>
+            {
+                bool shouldResolve = ShouldResolveTenant(context);
+                if (shouldResolve)
+                    return ResolveCronusContext(context, next);
+
+                return next.Invoke();
+            });
         }
 
         public static IApplicationBuilder UseCronusAspNetCore(this IApplicationBuilder app, Func<HttpContext, bool> shouldResolveTenant)
@@ -58,6 +66,20 @@ namespace Elders.Cronus.AspNetCore
 
                 return Task.CompletedTask;
             }
+        }
+
+        private static bool ShouldResolveTenant(HttpContext context)
+        {
+            bool shoudResolve = true;
+
+            Endpoint endpoint = context.Features.Get<IEndpointFeature>()?.Endpoint;
+            if (endpoint is not null)
+            {
+                BypassTenantAttribute doNotRequireTenantAttribute = endpoint.Metadata.GetMetadata<BypassTenantAttribute>();
+                if (doNotRequireTenantAttribute is not null)
+                    shoudResolve = false;
+            }
+            return shoudResolve;
         }
     }
 }
