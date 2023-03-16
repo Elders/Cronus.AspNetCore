@@ -1,3 +1,12 @@
+# [8.3.0](https://github.com/Elders/Cronus.AspNetCore/compare/v8.2.1...v8.3.0) (2023-03-16)
+
+
+### Features
+
+* Adds BypassTenantAttribute that allows cronus to ignore checks for tenant ([7d335ac](https://github.com/Elders/Cronus.AspNetCore/commit/7d335ac952a69920a1bdb0b8746e776058b8853f))
+* Adds BypassTenantAttribute that allows cronus to ignore checks for tenant ([ed03ef0](https://github.com/Elders/Cronus.AspNetCore/commit/ed03ef02e95ec3f340adc7ac82ac59ea7f9d84f5))
+* Adds DoNotRequireTenant attribute that allows cronus to ignore checks for tenant ([1865129](https://github.com/Elders/Cronus.AspNetCore/commit/1865129bda6dfc44f6318bb23957818d25e9f07c))
+
 ## [8.2.1](https://github.com/Elders/Cronus.AspNetCore/compare/v8.2.0...v8.2.1) (2023-03-07)
 
 
