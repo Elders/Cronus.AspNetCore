@@ -45,7 +45,6 @@ namespace Elders.Cronus.AspNetCore
                 if (shouldResolve)
                 {
                     return ResolveCronusContext(context, next);
-
                 }
 
                 return next.Invoke();
