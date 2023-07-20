@@ -1,3 +1,10 @@
+## [8.3.1-preview.1](https://github.com/Elders/Cronus.AspNetCore/compare/v8.3.0...v8.3.1-preview.1) (2023-07-20)
+
+
+### Bug Fixes
+
+* Updates to start using ICronusContextAccessor ([91211f1](https://github.com/Elders/Cronus.AspNetCore/commit/91211f18caf5e4b6274b342ebaa8b1b0a5ceda06))
+
 # [8.3.0](https://github.com/Elders/Cronus.AspNetCore/compare/v8.2.1...v8.3.0) (2023-03-16)
 
 
