@@ -1,3 +1,5 @@
+# [9.0.0-preview.1](https://github.com/Elders/Cronus.AspNetCore/compare/v8.3.1-preview.1...v9.0.0-preview.1) (2023-07-20)
+
 ## [8.3.1-preview.1](https://github.com/Elders/Cronus.AspNetCore/compare/v8.3.0...v8.3.1-preview.1) (2023-07-20)
 
 
