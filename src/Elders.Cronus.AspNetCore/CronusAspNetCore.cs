@@ -55,8 +55,8 @@ namespace Elders.Cronus.AspNetCore
         {
             try
             {
-                var cronusContextFactory = context.RequestServices.GetRequiredService<CronusContextFactory>();
-                CronusContext cronusContext = cronusContextFactory.GetContext(context, context.RequestServices);
+                var cronusContextFactory = context.RequestServices.GetRequiredService<DefaultCronusContextFactory>();
+                CronusContext cronusContext = cronusContextFactory.Create(context, context.RequestServices);
 
                 return next.Invoke();
             }
