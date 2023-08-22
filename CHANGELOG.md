@@ -1,3 +1,5 @@
+# [10.0.0-preview.1](https://github.com/Elders/Cronus.AspNetCore/compare/v9.0.0...v10.0.0-preview.1) (2023-08-22)
+
 # [9.0.0](https://github.com/Elders/Cronus.AspNetCore/compare/v8.3.0...v9.0.0) (2023-08-22)
 
 
