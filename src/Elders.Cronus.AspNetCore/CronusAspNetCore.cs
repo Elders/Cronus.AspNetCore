@@ -1,4 +1,4 @@
-﻿using Elders.Cronus.AspNetCore.Exeptions;
+﻿using Elders.Cronus.AspNetCore.Exceptions;
 using Elders.Cronus.MessageProcessing;
 using Elders.Cronus.Multitenancy;
 using Microsoft.AspNetCore.Builder;
