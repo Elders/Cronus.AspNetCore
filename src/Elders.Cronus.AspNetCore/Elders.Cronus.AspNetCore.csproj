@@ -17,7 +17,7 @@
     <Description>Cronus is a lightweight framework for building event driven systems with DDD/CQRS in mind.</Description>
     <PackageTags>CQRS DDD ES Event store sourcing cronus</PackageTags>
 
-    <Copyright>Copyright © Elders OSS 2013-2023</Copyright>
+    <Copyright>Copyright © Elders OSS 2013-2024</Copyright>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RequireLicenseAcceptance>true</RequireLicenseAcceptance>
 
@@ -36,7 +36,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cronus" Version="10.0.0-preview.2" />
+    <PackageReference Include="Cronus" Version="10.0.0" />
   </ItemGroup>
 
 </Project>
