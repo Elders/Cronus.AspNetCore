@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Net;
 using System.Threading.Tasks;
@@ -58,7 +59,11 @@ namespace Elders.Cronus.AspNetCore
                 var cronusContextFactory = context.RequestServices.GetRequiredService<DefaultCronusContextFactory>();
                 CronusContext cronusContext = cronusContextFactory.Create(context, context.RequestServices);
 
-                return next.Invoke();
+                ILogger logger = context.RequestServices.GetService<ILogger>();
+                using (logger.BeginScope(s => s.AddScope(Log.Tenant, cronusContext.Tenant)))
+                {
+                    return next.Invoke();
+                }
             }
             catch (UnableToResolveTenantException)
             {
