@@ -59,7 +59,7 @@ namespace Elders.Cronus.AspNetCore
                 var cronusContextFactory = context.RequestServices.GetRequiredService<DefaultCronusContextFactory>();
                 CronusContext cronusContext = cronusContextFactory.Create(context, context.RequestServices);
 
-                ILogger logger = context.RequestServices.GetService<ILogger>();
+                ILogger logger = context.RequestServices.GetService<ILogger<CronusContext>>();
                 using (logger.BeginScope(s => s.AddScope(Log.Tenant, cronusContext.Tenant)))
                 {
                     return next.Invoke();
